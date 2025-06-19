@@ -21,11 +21,11 @@ y_test = test_df['Sales_Class']
 mlflow.set_experiment("ps4-games-sales-classification")
 
 # Start MLflow
-with mlflow.start_run(nested=True):
-    model = LogisticRegression(max_iter=200)
-    model.fit(X_train, y_train)
+# with mlflow.start_run(nested=True):
+#     model = LogisticRegression(max_iter=200)
+#     model.fit(X_train, y_train)
 
-    y_pred = model.predict(X_test)
-    acc = accuracy_score(y_test, y_pred)
+#     y_pred = model.predict(X_test)
+#     acc = accuracy_score(y_test, y_pred)
 
-    print(f"Akurasi pada testing: {acc:.4f}")
+#     print(f"Akurasi pada testing: {acc:.4f}")
