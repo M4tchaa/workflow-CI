@@ -3,11 +3,7 @@ name: Train Model Workflow
 on:
   push:
     paths:
-      - 'modelling.py'
-      - 'train.csv'
-      - 'test.csv'
-      - 'MLProject'
-      - 'conda.yaml'
+      - 'MLProject/**'
       - '.github/workflows/train.yml'
 
 jobs:
