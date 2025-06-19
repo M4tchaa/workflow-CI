@@ -1,0 +1,32 @@
+name: Train Model Workflow
+
+on:
+  push:
+    paths:
+      - 'modelling.py'
+      - 'train.csv'
+      - 'test.csv'
+      - 'MLProject'
+      - 'conda.yaml'
+      - '.github/workflows/train.yml'
+
+jobs:
+  train:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          pip install mlflow pandas scikit-learn
+
+      - name: Run MLProject
+        run: |
+          mlflow run . --env-manager=local
