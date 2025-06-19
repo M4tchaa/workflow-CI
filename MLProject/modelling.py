@@ -21,7 +21,7 @@ y_test = test_df['Sales_Class']
 mlflow.set_experiment("ps4-games-sales-classification")
 
 # Start MLflow
-with mlflow.start_run():
+with mlflow.start_run(nested=True):
     model = LogisticRegression(max_iter=200)
     model.fit(X_train, y_train)
 
