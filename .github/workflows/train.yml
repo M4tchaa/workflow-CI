@@ -3,11 +3,11 @@ name: Train Model Workflow
 on:
   push:
     paths:
-      - 'MLProject/modelling.py'
-      - 'MLProject/train.csv'
-      - 'MLProject/test.csv'
-      - 'MLProject/MLProject'
-      - 'MLProject/conda.yaml'
+      - 'modelling.py'
+      - 'train.csv'
+      - 'test.csv'
+      - 'MLProject'
+      - 'conda.yaml'
       - '.github/workflows/train.yml'
 
 jobs:
@@ -28,5 +28,6 @@ jobs:
           pip install mlflow pandas scikit-learn
 
       - name: Run MLProject
+      working-directory: ./MLProject
         run: |
           mlflow run . --env-manager=local
