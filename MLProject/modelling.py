@@ -4,6 +4,7 @@ import mlflow.sklearn
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
+import joblib
 
 # Autolog aktif
 mlflow.autolog()
@@ -19,6 +20,8 @@ y_test = test_df['Sales_Class']
 
 # MLflow experiment
 mlflow.set_experiment("ps4-games-sales-classification")
+
+joblib.dump(model, "model.pkl")
 
 # Start MLflow
 # with mlflow.start_run(nested=True):
