@@ -28,6 +28,6 @@ jobs:
           pip install mlflow pandas scikit-learn
 
       - name: Run MLProject
-      working-directory: ./MLProject
+        working-directory: ./MLProject
         run: |
           mlflow run . --env-manager=local
