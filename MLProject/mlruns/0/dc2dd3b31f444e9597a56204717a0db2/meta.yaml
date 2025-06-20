@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Development/Desktop/All%20Projects/workflow-CI/MLProject/mlruns/0/dc2dd3b31f444e9597a56204717a0db2/artifacts
+end_time: 1750416139083
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: dc2dd3b31f444e9597a56204717a0db2
+run_name: nimble-hawk-323
+run_uuid: dc2dd3b31f444e9597a56204717a0db2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750416123768
+status: 3
+tags: []
+user_id: Development

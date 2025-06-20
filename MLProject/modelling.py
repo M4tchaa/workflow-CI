@@ -29,4 +29,5 @@ print(f"Akurasi: {acc:.4f} | F1-score: {f1:.4f}")
 
 # Simpan model
 # joblib.dump(model, "model.pkl")
-mlflow.sklearn.log_model(model, "model")
+mlflow.set_tracking_uri("file:./mlruns")
+mlflow.set_experiment("default")
