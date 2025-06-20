@@ -28,5 +28,5 @@ f1 = f1_score(y_test, y_pred)
 print(f"Akurasi: {acc:.4f} | F1-score: {f1:.4f}")
 
 # Simpan model
-joblib.dump(model, "model.pkl")
+# joblib.dump(model, "model.pkl")
 mlflow.sklearn.log_model(model, "model")
